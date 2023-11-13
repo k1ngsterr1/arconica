@@ -1,0 +1,188 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+
+$gray: #3a3e41;
+$orange: #fd4100;
+$plus-nav-size: 50px;
+$plus-nav-line-length: 100px;
+$plus-nav-line-thickness: 4px;
+$link-padding: 10px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.screen {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: $gray;
+      font-family: "Gilroy-Bold", sans-serif;
+      font-size: clamp(40px, 18.6912vw, 160px);
+
+      .logotype {
+        width: clamp(150px, 70.092vw, 600px);
+      }
+
+      .under-text {
+        font-size: clamp(10px, 4.6728vw, 40px);
+        margin-top: clamp(8px, 3.73824vw, 32px);
+      }
+    }
+
+    &__plus-nav {
+      width: clamp(125px, 58.41vw, 500px);
+      height: clamp(125px, 58.41vw, 500px);
+      display: flex;
+      position: relative;
+      margin-top: 32px;
+
+      &--top-left {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        left: 0;
+        position: absolute;
+        border-right: 2.5px solid $orange;
+        border-bottom: 2.5px solid $orange;
+        transition: 0.3s all;
+        &:hover {
+          background-color: black;
+          border-left: 5px solid $orange;
+          border-top: 5px solid $orange;
+          cursor: pointer;
+
+          .text {
+            color: white;
+          }
+        }
+
+        .text {
+          width: 100%;
+          font-size: 16px;
+          font-family: "Gilroy-Regular", sans-serif;
+          color: black;
+          animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1.5s; /* don't forget to set a duration! */
+          animation-delay: 1s;
+        }
+      }
+      &--top-right {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        right: 0;
+        position: absolute;
+        border-left: 2.5px solid $orange;
+        border-bottom: 2.5px solid $orange;
+        transition: 0.3s all;
+        &:hover {
+          background-color: #4682b4;
+          border-right: 5px solid $orange;
+          border-top: 5px solid $orange;
+          cursor: pointer;
+
+          .text {
+            color: white;
+          }
+        }
+
+        .text {
+          width: 100%;
+          font-size: 16px;
+          font-family: "Gilroy-Regular", sans-serif;
+          color: black;
+          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1.5s; /* don't forget to set a duration! */
+          animation-delay: 1.5s;
+        }
+      }
+      &--bottom-right {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        border-left: 2.5px solid $orange;
+        border-top: 2.5px solid $orange;
+        transition: 0.3s all;
+        &:hover {
+          background-color: #4cbd2d;
+          border-right: 5px solid $orange;
+          border-bottom: 5px solid $orange;
+          cursor: pointer;
+
+          .text {
+            color: white;
+          }
+        }
+
+        .text {
+          width: 100%;
+          font-size: 16px;
+          font-family: "Gilroy-Regular", sans-serif;
+          color: black;
+        }
+      }
+      &--bottom-left {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        border-right: 2.5px solid $orange;
+        border-top: 2.5px solid $orange;
+        transition: 0.3s all;
+        &:hover {
+          background-color: $orange;
+          border-right: 5px solid $orange;
+          border-bottom: 5px solid $orange;
+          cursor: pointer;
+
+          .text {
+            color: white;
+          }
+        }
+
+        .text {
+          width: 70%;
+          font-size: 16px;
+          font-family: "Gilroy-Regular", sans-serif;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
