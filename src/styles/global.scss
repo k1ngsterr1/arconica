@@ -2,10 +2,9 @@
 
 $gray: #3a3e41;
 $orange: #fd4100;
-$plus-nav-size: 50px;
-$plus-nav-line-length: 100px;
-$plus-nav-line-thickness: 4px;
-$link-padding: 10px;
+$black: black;
+$lime: #4cbd2d;
+$blue: #4682b4;
 
 * {
   margin: 0;
@@ -46,7 +45,7 @@ $link-padding: 10px;
       height: clamp(125px, 58.41vw, 500px);
       display: flex;
       position: relative;
-      margin-top: 32px;
+      margin-top: clamp(16px, 7.47648vw, 64px);
 
       &--top-left {
         width: 50%;
@@ -78,7 +77,7 @@ $link-padding: 10px;
           color: black;
           animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
           animation-duration: 1.5s; /* don't forget to set a duration! */
-          animation-delay: 1s;
+          animation-delay: 0s;
         }
       }
       &--top-right {
@@ -109,9 +108,9 @@ $link-padding: 10px;
           font-size: 16px;
           font-family: "Gilroy-Regular", sans-serif;
           color: black;
-          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation: backInRight, change-to-blue 10s ease-in; /* referring directly to the animation's @keyframe declaration */
           animation-duration: 1.5s; /* don't forget to set a duration! */
-          animation-delay: 1.5s;
+          animation-delay: 0s;
         }
       }
       &--bottom-right {
@@ -143,6 +142,9 @@ $link-padding: 10px;
           font-size: 16px;
           font-family: "Gilroy-Regular", sans-serif;
           color: black;
+          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1.5s; /* don't forget to set a duration! */
+          animation-delay: 0s;
         }
       }
       &--bottom-left {
@@ -174,6 +176,9 @@ $link-padding: 10px;
           font-size: 16px;
           font-family: "Gilroy-Regular", sans-serif;
           color: black;
+          animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1.5s; /* don't forget to set a duration! */
+          animation-delay: 0s;
         }
       }
     }
@@ -185,4 +190,25 @@ $link-padding: 10px;
   align-items: center;
   justify-content: center;
   margin-top: 0px;
+}
+
+// Color Change Animations
+
+@keyframes change-to-blue {
+  0% {
+    color: $black;
+  }
+  25% {
+    color: $blue;
+  }
+
+  50% {
+    color: $blue;
+  }
+  75% {
+    color: $blue;
+  }
+  100% {
+    color: $black;
+  }
 }
