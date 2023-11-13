@@ -12,6 +12,8 @@ $blue: #4682b4;
   box-sizing: border-box;
 }
 
+// Phone Version
+
 .screen {
   &__content {
     display: flex;
@@ -142,7 +144,7 @@ $blue: #4682b4;
           font-size: 16px;
           font-family: "Gilroy-Regular", sans-serif;
           color: black;
-          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation: backInRight, change-to-green 10s ease-in; /* referring directly to the animation's @keyframe declaration */
           animation-duration: 1.5s; /* don't forget to set a duration! */
           animation-delay: 0s;
         }
@@ -176,14 +178,51 @@ $blue: #4682b4;
           font-size: 16px;
           font-family: "Gilroy-Regular", sans-serif;
           color: black;
-          animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+          animation: backInLeft, change-to-orange 10s ease-in; /* referring directly to the animation's @keyframe declaration */
           animation-duration: 1.5s; /* don't forget to set a duration! */
           animation-delay: 0s;
         }
       }
     }
   }
+
+  &__content-pc {
+    display: none;
+  }
 }
+
+// Tablet Version
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .screen {
+    &__content {
+      &__logo {
+        .under-text {
+          font-size: clamp(20px, 4.499437570303712vw, 80px);
+        }
+      }
+
+      &__plus-nav {
+        &--top-left,
+        &--top-right,
+        &--bottom-left,
+        &--bottom-right {
+          .text {
+            font-size: clamp(17.5px, 3.937007874015748vw, 70px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Pc Version
+@media (min-width: 1025px) {
+  .screen {
+  }
+}
+
+// Color Change Animations
 
 .animation {
   display: flex;
@@ -192,8 +231,6 @@ $blue: #4682b4;
   margin-top: 0px;
 }
 
-// Color Change Animations
-
 @keyframes change-to-blue {
   0% {
     color: $black;
@@ -201,12 +238,47 @@ $blue: #4682b4;
   25% {
     color: $blue;
   }
-
   50% {
     color: $blue;
   }
   75% {
     color: $blue;
+  }
+  100% {
+    color: $black;
+  }
+}
+
+@keyframes change-to-green {
+  0% {
+    color: $black;
+  }
+  25% {
+    color: $lime;
+  }
+  50% {
+    color: $lime;
+  }
+  75% {
+    color: $lime;
+  }
+  100% {
+    color: $black;
+  }
+}
+
+@keyframes change-to-orange {
+  0% {
+    color: $black;
+  }
+  25% {
+    color: $orange;
+  }
+  50% {
+    color: $orange;
+  }
+  75% {
+    color: $orange;
   }
   100% {
     color: $black;

@@ -51,6 +51,7 @@ const App = () => {
           </div>
         </Slide>
       </main>
+      <main className="screen__content-pc"></main>
     </div>
   );
 };
