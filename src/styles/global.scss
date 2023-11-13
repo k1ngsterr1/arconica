@@ -219,6 +219,13 @@ $blue: #4682b4;
 // Pc Version
 @media (min-width: 1025px) {
   .screen {
+    &__content {
+      display: none;
+    }
+
+    &__content-pc {
+      display: flex;
+    }
   }
 }
 
