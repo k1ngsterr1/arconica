@@ -324,6 +324,14 @@ $blue: #4682b4;
               }
             }
 
+            .text-hidden {
+              position: absolute;
+              transform: translateY(-200px);
+              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-family: "Gilroy-Regular", sans-serif;
+              color: white;
+            }
+
             .text {
               width: 70%;
               font-size: clamp(13.5px, 1.40616vw, 54px);

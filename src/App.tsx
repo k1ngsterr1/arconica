@@ -61,7 +61,6 @@ const App = () => {
           </div>
         </Slide>
       </main>
-      {/* <Slide cascade direction="up" duration={1000}> */}
       <main className="screen__content-pc">
         <div className="screen__content-pc__logo">
           <div className="screen__content-pc__logo__container">
@@ -98,6 +97,7 @@ const App = () => {
                 }
               >
                 <span className="text">Special Solutions</span>
+                <span className="text-hidden">Строительная компания</span>
               </div>
               <div className="screen__content-pc__logo__plus-nav--bottom-right">
                 <span className="text">HoReCa Solutions</span>
@@ -109,7 +109,6 @@ const App = () => {
           </Slide>
         </div>
       </main>
-      {/* </Slide> */}
     </div>
   );
 };
