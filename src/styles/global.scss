@@ -251,7 +251,8 @@ $blue: #4682b4;
           justify-content: center;
 
           .logotype {
-            width: 700px;
+            width: clamp(350px, 36.456vw, 1400px);
+            margin-bottom: clamp(8px, 0.83328vw, 32px);
           }
 
           .under-text {

@@ -72,15 +72,7 @@ const App = () => {
               duration={1000}
             >
               <img src={logo} alt="logo" className="logotype" />
-
-              {/* <Slide
-              direction="left"
-              className="animate mt-16"
-              triggerOnce={true}
-              duration={1000}
-            > */}
               <span className="under-text">Create Your Future Now</span>
-              {/* </Slide> */}
             </Slide>
           </div>
           <Slide
