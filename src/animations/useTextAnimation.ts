@@ -37,17 +37,17 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
   const textOnHoverRightTop = useCallback(() => {
     topRightTextRef.current &&
       gsap.to(topRightTextRef.current, {
-        width: "50%",
+        width: "60%",
         y: -30,
         opacity: 1,
-        fontSize: "clamp(10px,1.0416vw,40px)",
+        fontSize: "clamp(9px,0.93744vw,36px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
     topRightAdditionalRef.current &&
       gsap.to(topRightAdditionalRef.current, {
         y: 30,
-        fontSize: "clamp(12.5px,1.302vw,50px)",
+        fontSize: "clamp(9.5px,0.9895200000000001vw,38px)",
         opacity: 1,
         duration: 0.5,
         ease: "power1.inOut",
@@ -60,7 +60,7 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
         width: "70%",
         y: 0,
         opacity: 1,
-        fontSize: "clamp(15px,1.5624vw,60px)",
+        fontSize: "clamp(11px,1.1457600000000001vw,44px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
@@ -80,14 +80,14 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
         width: "60%",
         y: -30,
         opacity: 1,
-        fontSize: "clamp(10px,1.0416vw,40px)",
+        fontSize: "clamp(9px,0.93744vw,36px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
     bottomRightAdditionalRef.current &&
       gsap.to(bottomRightAdditionalRef.current, {
         y: 30,
-        fontSize: "clamp(12.5px,1.302vw,50px)",
+        fontSize: "clamp(9.5px,0.9895200000000001vw,38px)",
         opacity: 1,
         duration: 0.5,
         ease: "power1.inOut",
@@ -100,7 +100,7 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
         width: "70%",
         y: 0,
         opacity: 1,
-        fontSize: "clamp(15px,1.5624vw,60px)",
+        fontSize: "clamp(11px,1.1457600000000001vw,44px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
@@ -119,14 +119,14 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
       gsap.to(topLeftTextRef.current, {
         y: -30,
         opacity: 1,
-        fontSize: "clamp(10px,1.0416vw,40px)",
+        fontSize: "clamp(9px,0.93744vw,36px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
     topLeftAdditionalRef.current &&
       gsap.to(topLeftAdditionalRef.current, {
         y: 30,
-        fontSize: "clamp(12.5px,1.302vw,50px)",
+        fontSize: "clamp(9.5px,0.9895200000000001vw,38px)",
         opacity: 1,
         duration: 0.5,
         ease: "power1.inOut",
@@ -136,9 +136,10 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
   const resetTextOnHoverLeftTop = useCallback(() => {
     topLeftTextRef.current &&
       gsap.to(topLeftTextRef.current, {
+        width: "90%",
         y: 0,
         opacity: 1,
-        fontSize: "clamp(15px,1.5624vw,60px)",
+        fontSize: "clamp(11px,1.1457600000000001vw,44px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
@@ -158,14 +159,14 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
         width: "60%",
         y: -30,
         opacity: 1,
-        fontSize: "clamp(10px,1.0416vw,40px)",
+        fontSize: "clamp(9px,0.93744vw,36px)",
         duration: 0.5,
         ease: "power1.inOut",
       });
     bottomLeftAdditionalRef.current &&
       gsap.to(bottomLeftAdditionalRef.current, {
         y: 30,
-        fontSize: "clamp(12.5px,1.302vw,50px)",
+        fontSize: "clamp(9.5px,0.9895200000000001vw,38px)",
         opacity: 1,
         duration: 0.5,
         ease: "power1.inOut",
@@ -178,7 +179,7 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
         width: "70%",
         y: 0,
         opacity: 1,
-        fontSize: "clamp(15px,1.5624vw,60px)",
+        fontSize: "clamp(11px,1.1457600000000001vw,44px)",
         duration: 0.5,
         ease: "power1.inOut",
       });

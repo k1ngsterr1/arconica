@@ -293,7 +293,7 @@ $blue: #4682b4;
 
             .text {
               width: 80%;
-              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-size: clamp(11px, 1.1457600000000001vw, 44px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
@@ -341,7 +341,7 @@ $blue: #4682b4;
 
             .text {
               width: 70%;
-              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-size: clamp(11px, 1.1457600000000001vw, 44px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInRight, change-to-blue 10s ease-in; /* referring directly to the animation's @keyframe declaration */
@@ -375,7 +375,7 @@ $blue: #4682b4;
 
             .text {
               width: 70%;
-              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-size: clamp(11px, 1.1457600000000001vw, 44px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInRight, change-to-green 10s ease-in; /* referring directly to the animation's @keyframe declaration */
@@ -416,7 +416,7 @@ $blue: #4682b4;
 
             .text {
               width: 70%;
-              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-size: clamp(11px, 1.1457600000000001vw, 44px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInLeft, change-to-orange 10s ease-in; /* referring directly to the animation's @keyframe declaration */
