@@ -51,7 +51,28 @@ const App = () => {
           </div>
         </Slide>
       </main>
-      <main className="screen__content-pc"></main>
+      <main className="screen__content-pc">
+        <div className="screen__content-pc__logo">
+          <div className="screen__content-pc__logo__container">
+            <img src={logo} alt="logo" className="logotype" />
+            <span className="under-text">Create Your Future Now</span>
+          </div>
+          <div className="screen__content-pc__logo__plus-nav">
+            <div className="screen__content-pc__logo__plus-nav--top-left">
+              <span className="text">AS Partners Architecs</span>
+            </div>
+            <div className="screen__content-pc__logo__plus-nav--top-right">
+              <span className="text">Special Solutions</span>
+            </div>
+            <div className="screen__content-pc__logo__plus-nav--bottom-right">
+              <span className="text">HoReCa Solutions</span>
+            </div>
+            <div className="screen__content-pc__logo__plus-nav--bottom-left">
+              <span className="text">Urban Projects</span>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
