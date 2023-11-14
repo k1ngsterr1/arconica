@@ -1,9 +1,21 @@
 import { Slide } from "react-awesome-reveal";
+import { useTextAnimation } from "./animations/useTextAnimation";
 import logo from "./assets/arconica_logo.svg";
 import "./styles/global.scss";
 import "animate.css";
 
 const App = () => {
+  const {
+    topRightTextRef,
+    topRightAdditionalRef,
+    topLeftTextRef,
+    topLeftAdditionalRef,
+    textOnHoverRightTop,
+    resetTextOnHoverRightTop,
+    textOnHoverLeftTop,
+    resetTextOnHoverLeftTop,
+  } = useTextAnimation();
+
   return (
     <div className="screen">
       <main className="screen__content">
@@ -87,17 +99,30 @@ const App = () => {
                 onClick={() =>
                   window.open("https://special-solutions.kz/", "_blank")
                 }
+                onMouseEnter={textOnHoverLeftTop}
+                onMouseLeave={resetTextOnHoverLeftTop}
               >
-                <span className="text">AS Partners Architecs</span>
+                <span className="text" ref={topLeftTextRef}>
+                  AS Partners Architecs
+                </span>
+                <span className="text-hidden" ref={topLeftAdditionalRef}>
+                  Строительная компания
+                </span>
               </div>
               <div
                 className="screen__content-pc__logo__plus-nav--top-right"
                 onClick={() =>
                   window.open("https://special-solutions.kz/", "_blank")
                 }
+                onMouseEnter={textOnHoverRightTop}
+                onMouseLeave={resetTextOnHoverRightTop}
               >
-                <span className="text">Special Solutions</span>
-                <span className="text-hidden">Строительная компания</span>
+                <span className="text" ref={topRightTextRef}>
+                  Special Solutions
+                </span>
+                <span className="text-hidden" ref={topRightAdditionalRef}>
+                  Строительная компания
+                </span>
               </div>
               <div className="screen__content-pc__logo__plus-nav--bottom-right">
                 <span className="text">HoReCa Solutions</span>

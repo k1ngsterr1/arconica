@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 import gsap from "gsap";
 
 type useTextAnimationReturnType = {
@@ -12,7 +12,10 @@ type useTextAnimationReturnType = {
   bottomLeftTextRef: React.RefObject<HTMLSpanElement>;
   bottomLeftAdditionalRef: React.RefObject<HTMLSpanElement>;
   // Function
-  textOnHover: () => void;
+  textOnHoverRightTop: () => void;
+  resetTextOnHoverRightTop: () => void;
+  textOnHoverLeftTop: () => void;
+  resetTextOnHoverLeftTop: () => void;
 };
 
 // On Hover Animation:
@@ -27,10 +30,81 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
   const bottomLeftTextRef = useRef<HTMLSpanElement>(null);
   const bottomLeftAdditionalRef = useRef<HTMLSpanElement>(null);
 
-  const textOnHover = () => {
-    // Define your GSAP animation logic here, for example:
-    // gsap.to(topRightTextRef.current, { opacity: 1 });
-  };
+  const textOnHoverRightTop = useCallback(() => {
+    topRightTextRef.current &&
+      gsap.to(topRightTextRef.current, {
+        y: -30,
+        opacity: 1,
+        fontSize: "clamp(10px,1.0416vw,40px)",
+        duration: 1,
+        ease: "power1.inOut",
+      });
+    topRightAdditionalRef.current &&
+      gsap.to(topRightAdditionalRef.current, {
+        y: 30,
+        fontSize: "clamp(12.5px,1.302vw,50px)",
+        opacity: 1,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+  }, []);
+
+  const resetTextOnHoverRightTop = useCallback(() => {
+    topRightTextRef.current &&
+      gsap.to(topRightTextRef.current, {
+        y: 0,
+        opacity: 1,
+        fontSize: "clamp(15px,1.5624vw,60px)",
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+    topRightAdditionalRef.current &&
+      gsap.to(topRightAdditionalRef.current, {
+        y: -100,
+        fontSize: "clamp(12.5px,1.302vw,50px)",
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+  }, []);
+
+  const textOnHoverLeftTop = useCallback(() => {
+    topLeftTextRef.current &&
+      gsap.to(topLeftTextRef.current, {
+        y: -30,
+        opacity: 1,
+        fontSize: "clamp(10px,1.0416vw,40px)",
+        duration: 1,
+        ease: "power1.inOut",
+      });
+    topLeftAdditionalRef.current &&
+      gsap.to(topLeftAdditionalRef.current, {
+        y: 30,
+        fontSize: "clamp(12.5px,1.302vw,50px)",
+        opacity: 1,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+  }, []);
+
+  const resetTextOnHoverLeftTop = useCallback(() => {
+    topLeftTextRef.current &&
+      gsap.to(topLeftTextRef.current, {
+        y: 0,
+        opacity: 1,
+        fontSize: "clamp(15px,1.5624vw,60px)",
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+    topLeftAdditionalRef.current &&
+      gsap.to(topLeftAdditionalRef.current, {
+        y: -100,
+        fontSize: "clamp(12.5px,1.302vw,50px)",
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+  }, []);
 
   return {
     topRightTextRef,
@@ -41,6 +115,9 @@ export const useTextAnimation = (): useTextAnimationReturnType => {
     topLeftAdditionalRef,
     bottomLeftTextRef,
     bottomLeftAdditionalRef,
-    textOnHover,
+    textOnHoverRightTop,
+    resetTextOnHoverRightTop,
+    textOnHoverLeftTop,
+    resetTextOnHoverLeftTop,
   };
 };
