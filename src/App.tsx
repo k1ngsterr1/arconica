@@ -8,12 +8,20 @@ const App = () => {
   const {
     topRightTextRef,
     topRightAdditionalRef,
+    bottomRightTextRef,
+    bottomRightAdditionalRef,
     topLeftTextRef,
     topLeftAdditionalRef,
+    bottomLeftTextRef,
+    bottomLeftAdditionalRef,
     textOnHoverRightTop,
     resetTextOnHoverRightTop,
+    textOnHoverRightBottom,
+    resetTextOnHoverRightBottom,
     textOnHoverLeftTop,
     resetTextOnHoverLeftTop,
+    textOnHoverLeftBottom,
+    resetTextOnHoverLeftBottom,
   } = useTextAnimation();
 
   return (
@@ -106,7 +114,7 @@ const App = () => {
                   AS Partners Architecs
                 </span>
                 <span className="text-hidden" ref={topLeftAdditionalRef}>
-                  Строительная компания
+                  Интерьеры
                 </span>
               </div>
               <div
@@ -124,11 +132,29 @@ const App = () => {
                   Строительная компания
                 </span>
               </div>
-              <div className="screen__content-pc__logo__plus-nav--bottom-right">
-                <span className="text">HoReCa Solutions</span>
+              <div
+                className="screen__content-pc__logo__plus-nav--bottom-right"
+                onMouseEnter={textOnHoverRightBottom}
+                onMouseLeave={resetTextOnHoverRightBottom}
+              >
+                <span className="text" ref={bottomRightTextRef}>
+                  HoReCa Solutions
+                </span>
+                <span className="text-hidden" ref={bottomRightAdditionalRef}>
+                  В Разработке
+                </span>
               </div>
-              <div className="screen__content-pc__logo__plus-nav--bottom-left">
-                <span className="text">Urban Projects</span>
+              <div
+                className="screen__content-pc__logo__plus-nav--bottom-left"
+                onMouseEnter={textOnHoverLeftBottom}
+                onMouseLeave={resetTextOnHoverLeftBottom}
+              >
+                <span className="text" ref={bottomLeftTextRef}>
+                  Urban Projects
+                </span>
+                <span className="text-hidden" ref={bottomLeftAdditionalRef}>
+                  В Разработке
+                </span>
               </div>
             </div>
           </Slide>

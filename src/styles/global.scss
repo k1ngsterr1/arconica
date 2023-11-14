@@ -382,6 +382,13 @@ $blue: #4682b4;
               animation-duration: 1.5s; /* don't forget to set a duration! */
               animation-delay: 0s;
             }
+            .text-hidden {
+              position: absolute;
+              transform: translateY(-200px);
+              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-family: "Gilroy-Regular", sans-serif;
+              color: white;
+            }
           }
           &--bottom-left {
             width: 50%;
@@ -415,6 +422,13 @@ $blue: #4682b4;
               animation: backInLeft, change-to-orange 10s ease-in; /* referring directly to the animation's @keyframe declaration */
               animation-duration: 1.5s; /* don't forget to set a duration! */
               animation-delay: 0s;
+            }
+            .text-hidden {
+              position: absolute;
+              transform: translateY(-200px);
+              font-size: clamp(13.5px, 1.40616vw, 54px);
+              font-family: "Gilroy-Regular", sans-serif;
+              color: white;
             }
           }
         }
