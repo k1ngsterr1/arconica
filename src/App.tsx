@@ -34,10 +34,20 @@ const App = () => {
               delay={200}
             >
               <div className="screen__content__plus-nav">
-                <div className="screen__content__plus-nav--top-left">
+                <div
+                  className="screen__content__plus-nav--top-left"
+                  onClick={() =>
+                    window.open("https://special-solutions.kz/", "_blank")
+                  }
+                >
                   <span className="text">AS Partners Architecs</span>
                 </div>
-                <div className="screen__content__plus-nav--top-right">
+                <div
+                  className="screen__content__plus-nav--top-right"
+                  onClick={() =>
+                    window.open("https://special-solutions.kz/", "_blank")
+                  }
+                >
                   <span className="text">Special Solutions</span>
                 </div>
                 <div className="screen__content__plus-nav--bottom-right">
@@ -51,28 +61,63 @@ const App = () => {
           </div>
         </Slide>
       </main>
+      {/* <Slide cascade direction="up" duration={1000}> */}
       <main className="screen__content-pc">
         <div className="screen__content-pc__logo">
           <div className="screen__content-pc__logo__container">
-            <img src={logo} alt="logo" className="logotype" />
-            <span className="under-text">Create Your Future Now</span>
+            <Slide
+              direction="left"
+              className="animate"
+              triggerOnce={true}
+              duration={1000}
+            >
+              <img src={logo} alt="logo" className="logotype" />
+
+              {/* <Slide
+              direction="left"
+              className="animate mt-16"
+              triggerOnce={true}
+              duration={1000}
+            > */}
+              <span className="under-text">Create Your Future Now</span>
+              {/* </Slide> */}
+            </Slide>
           </div>
-          <div className="screen__content-pc__logo__plus-nav">
-            <div className="screen__content-pc__logo__plus-nav--top-left">
-              <span className="text">AS Partners Architecs</span>
+          <Slide
+            direction="right"
+            className="animate"
+            triggerOnce={true}
+            duration={1000}
+            delay={200}
+          >
+            <div className="screen__content-pc__logo__plus-nav">
+              <div
+                className="screen__content-pc__logo__plus-nav--top-left"
+                onClick={() =>
+                  window.open("https://special-solutions.kz/", "_blank")
+                }
+              >
+                <span className="text">AS Partners Architecs</span>
+              </div>
+              <div
+                className="screen__content-pc__logo__plus-nav--top-right"
+                onClick={() =>
+                  window.open("https://special-solutions.kz/", "_blank")
+                }
+              >
+                <span className="text">Special Solutions</span>
+              </div>
+              <div className="screen__content-pc__logo__plus-nav--bottom-right">
+                <span className="text">HoReCa Solutions</span>
+              </div>
+              <div className="screen__content-pc__logo__plus-nav--bottom-left">
+                <span className="text">Urban Projects</span>
+              </div>
             </div>
-            <div className="screen__content-pc__logo__plus-nav--top-right">
-              <span className="text">Special Solutions</span>
-            </div>
-            <div className="screen__content-pc__logo__plus-nav--bottom-right">
-              <span className="text">HoReCa Solutions</span>
-            </div>
-            <div className="screen__content-pc__logo__plus-nav--bottom-left">
-              <span className="text">Urban Projects</span>
-            </div>
-          </div>
+          </Slide>
         </div>
       </main>
+      {/* </Slide> */}
     </div>
   );
 };

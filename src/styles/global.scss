@@ -10,6 +10,7 @@ $blue: #4682b4;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 // Phone Version
@@ -95,7 +96,7 @@ $blue: #4682b4;
         border-bottom: 2.5px solid $orange;
         transition: 0.3s all;
         &:hover {
-          background-color: #4682b4;
+          background-color: $orange;
           border-right: 5px solid $orange;
           border-top: 5px solid $orange;
           cursor: pointer;
@@ -218,6 +219,10 @@ $blue: #4682b4;
 
 // Pc Version
 @media (min-width: 1025px) {
+  .mt-16 {
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+
   .screen {
     &__content {
       display: none;
@@ -239,26 +244,27 @@ $blue: #4682b4;
         align-items: center;
 
         &__container {
+          // width: 100%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          justify-content: center;
 
           .logotype {
-            width: clamp(300px, 31.248vw, 1200px);
+            width: 700px;
           }
 
           .under-text {
             color: $gray;
             font-family: "Gilroy-Regular", sans-serif;
             font-size: clamp(14.5px, 1.51032vw, 58px);
-            margin-top: clamp(8px, 3.73824vw, 32px);
           }
         }
 
         &__plus-nav {
           position: relative;
-          width: clamp(125px, 13.02vw, 500px);
-          height: clamp(125px, 13.02vw, 500px);
+          width: 300px;
+          height: 300px;
           margin-left: clamp(24px, 2.49984vw, 96px);
 
           &--top-left {
@@ -285,8 +291,8 @@ $blue: #4682b4;
             }
 
             .text {
-              width: 100%;
-              font-size: clamp(10px, 1.0416vw, 40px);
+              width: 80%;
+              font-size: clamp(13.5px, 1.40616vw, 54px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
@@ -307,7 +313,7 @@ $blue: #4682b4;
             border-bottom: 2.5px solid $orange;
             transition: 0.3s all;
             &:hover {
-              background-color: #4682b4;
+              background-color: $orange;
               border-right: 5px solid $orange;
               border-top: 5px solid $orange;
               cursor: pointer;
@@ -318,8 +324,8 @@ $blue: #4682b4;
             }
 
             .text {
-              width: 100%;
-              font-size: clamp(10px, 1.0416vw, 40px);
+              width: 70%;
+              font-size: clamp(13.5px, 1.40616vw, 54px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInRight, change-to-blue 10s ease-in; /* referring directly to the animation's @keyframe declaration */
@@ -352,8 +358,8 @@ $blue: #4682b4;
             }
 
             .text {
-              width: 100%;
-              font-size: clamp(10px, 1.0416vw, 40px);
+              width: 70%;
+              font-size: clamp(13.5px, 1.40616vw, 54px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInRight, change-to-green 10s ease-in; /* referring directly to the animation's @keyframe declaration */
@@ -387,7 +393,7 @@ $blue: #4682b4;
 
             .text {
               width: 70%;
-              font-size: clamp(10px, 1.0416vw, 40px);
+              font-size: clamp(13.5px, 1.40616vw, 54px);
               font-family: "Gilroy-Regular", sans-serif;
               color: black;
               animation: backInLeft, change-to-orange 10s ease-in; /* referring directly to the animation's @keyframe declaration */
